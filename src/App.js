@@ -10,9 +10,10 @@ const App = () => {
   return (
     <Router>
       <div className="App">
+        
         <header>
           <Navbar setImdbId={setImdbId} />
-          
+          <p>hello</p>
           <Routes>
               <Route path='/popular' element={<PopularComponent setImdbId={setImdbId} />} />
               <Route path='/' element={<ContentComponent imdbID={imdbId} />} />
