@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import ContentComponent from './components/ContentComponent';
+import PopularComponent from './components/PopularComponent';
 
-function App() {
+
+const App = () => {
+  const [imdbId,setImdbId]=useState('tt6468322');
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <Router>
+      <div className="App">
+        <header>
+          <Navbar setImdbId={setImdbId} />
+          
+          <Routes>
+              <Route path='/popular' element={<PopularComponent setImdbId={setImdbId} />} />
+              <Route path='/' element={<ContentComponent imdbID={imdbId} />} />
+          </Routes>
       </header>
-    </div>
+      </div>
+    </Router>
   );
 }
 
