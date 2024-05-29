@@ -71,7 +71,7 @@ const Navbar = (props) => {
       <div className="logo">
         <img src={require('../images/logo1.png')} alt="logo" />
         <ul>
-          <li><Link to="/">Home</Link></li>
+          <li><Link to="/">Home Page</Link></li>
           {/* <li>Filter</li> */}
           <li><Link to="/popular">Popular</Link></li>
         </ul>
