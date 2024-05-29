@@ -15,7 +15,7 @@ const ContentComponent = ({ imdbID }) => {
           setContent(data);
           setLoading(false);
         } else {
-          setError('No content found.');
+          setError(data.Error);
           setLoading(false);
         }
       } catch (error) {

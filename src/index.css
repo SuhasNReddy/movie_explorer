@@ -353,3 +353,8 @@ header .content .details h3 span{
     width: 50px;
     margin: 0 18px;
 }
+
+.errormessage{
+  color: white;
+  text-align: center;
+}
