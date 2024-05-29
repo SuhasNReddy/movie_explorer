@@ -9,7 +9,7 @@ const ContentComponent = ({ imdbID }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://www.omdbapi.com/?i=${imdbID}&apikey=6159e3f2`);
+        const response = await fetch(`https://www.omdbapi.com/?i=${imdbID}&apikey=6159e3f2`);
         const data = await response.json();
         if (data.Response === 'True') {
           setContent(data);

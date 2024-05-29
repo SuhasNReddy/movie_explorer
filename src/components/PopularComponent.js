@@ -21,7 +21,7 @@ const PopularComponent = ({setImdbId}) => {
         const fetchMovieDetails = async () => {
             try {
                 const promises = movieIds.map(async (id) => {
-                    const response = await fetch(`http://www.omdbapi.com/?i=${id}&apikey=6159e3f2`);
+                    const response = await fetch(`https://www.omdbapi.com/?i=${id}&apikey=6159e3f2`);
                     const data = await response.json();
                     if (data.Response === 'True') {
                         return data;
